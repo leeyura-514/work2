@@ -1,0 +1,34 @@
+.sc-title{
+    padding: 50px 16px 22px;
+    font-size: 20px;
+    line-height: 29px;
+    color: #333;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+    
+    .sc-product & {
+    padding-left: 0;
+    position: relative;
+    }
+    // @@ 왜 이거 적용안되는지 확인
+    // .swiper.product02 &{
+    //    padding-top: -20px;
+    //     .sc-product & {
+    //         padding-left: 0;
+    //         position: relative;
+            
+    //     }
+       
+    // }
+    
+    
+}
+
+.sc-title{
+    .swiper.product02 & {
+        padding-top: 30px;
+    }
+    .swiper.product03 & {
+        padding-top: 30px;
+    }
+}

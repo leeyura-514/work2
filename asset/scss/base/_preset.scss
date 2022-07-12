@@ -1,0 +1,50 @@
+// common의 용도
+
+// font??
+// ** strong{font-weight: bold;} preset사용하지말것에 설정하지말고, CSS에 각각 반영 필요 
+
+body{
+    font-family: 'Gilroy','NotoSansKR',Malgun Gothic,'맑은 고딕',Dotum,'돋움',sans-serif;
+    font-size: 13px;
+    line-height: 1.2em;
+    color: #1b1b1b;
+    background: #fff;
+    -webkit-text-size-adjust: none;
+
+    &.scroll-hidden{
+        overflow: hidden;//@@@스크롤안됨
+
+        .dimmed{//어두운영역 설정
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(#000, 0.3);//sass 문법
+            // background: rgba(0,0,0, 0.3);
+            z-index: 100;
+        }
+
+    }
+}
+
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+}
+
+// sp-bg01
+.header-area .gnb-area .menu-btn-box .btn.menu::after,
+.header-area .gnb-area .menu-btn-box .btn.search::after,
+.header-area .gnb-area .login-btn-box .link.cart::after,
+.header-area .gnb-area .login-btn-box .link.login::after{
+    background-image: url(../images/icon/sp-bg01.png);
+    background-repeat: no-repeat;
+    background-size: 100px auto;
+
+}
+
+

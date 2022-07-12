@@ -1,0 +1,117 @@
+// 모든 제품 다 꾸밀 수 잇음
+// 메인에서만 가능(서브페이지에서 다를 수 있음) 
+
+
+
+.prd-list{
+    &.prd-col{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;//fxww 넘치는거 떨어뜨림!
+        .prd-item{
+            padding-bottom: 50px;
+            width: calc((100% - 9px)/2);
+          
+           
+        }//best-item
+        
+
+    }
+    &.prd-row{
+        flex-direction: column;
+        padding: 0 16px;
+        .prd-item{
+            padding: 20px 0;
+            &+.prd-item{
+                border-top: 1px solid #eee;
+            }
+            &>a{
+                display: flex;
+            }
+            .img-box{width: 110px;}
+            .cont-box{flex: 1;}
+        }
+
+    }
+    .prd-item{
+        img{
+            width: 100%;
+        }
+        a{
+            display: block;
+        }
+        .cont-box{
+            padding: 15px 5% 0;
+            text-align: left;
+            // background: #f00;
+        
+            .review{
+                display: block;
+                color: #8e1f29;
+                font-weight: 600;
+                font-size: 13px;
+                line-height: 13px;
+                width: 100%;
+                letter-spacing: -0.05em;
+
+            }
+            .item-name{
+                padding: 10px 0;
+                font-size: 13px;
+                font-weight: 400;
+                letter-spacing: -0.05em;
+                
+            }
+            .price{
+                display: inline-block;
+                color: #333;
+                padding: 0;
+                font-size: 15px;
+                line-height: 16px;
+                font-weight: 500;
+                letter-spacing: -0.03em;
+                vertical-align: top;
+                .discount{
+                    color: #8e1f29; 
+                    font-weight: 600;
+                    margin-right: 5px;
+                    line-height: 16px;
+                    letter-spacing: -0.03em;
+                }
+                s{
+                    font-size: 13px;
+                    line-height: 18px;
+                    font-weight: 400;
+                    color: #8d8d8d;
+                    margin-left: 5px;
+                }
+            }
+            span{
+                display: inline-block;
+                width: 100%;
+                font-size: 13px;
+                line-height: 11px;
+                letter-spacing: -0.05em;
+                color: #999;
+                padding: 9px 0 8px;
+            }
+
+
+        }//cont-box
+
+        .info-event{
+            margin-top: 5px;
+            display: inline-block;
+            border: 1px solid rgba(142,31,41,0.5);
+            box-sizing: border-box;
+            // 좌표추가
+            padding: 5px 6px;
+            line-height: 1;
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: -0.05em;
+            color: #8e1f29; 
+        }
+
+    }
+}

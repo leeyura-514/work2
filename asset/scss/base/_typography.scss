@@ -1,0 +1,30 @@
+// woff - 모던웹 지원하는 폰트확장자 중요
+// woff2 - woff의 20% 압축버전 ***** 가장좋음
+// *tff - 트루타입 저버전 브라우저 지원
+// *otf - 오픈트루 타입"" "
+// eot - ie익스플로어를 지원하는 확장자
+
+// 두개 가져왔다면 두께 다르게 가져올려고 
+// WOFF만 잇으면 대부분 구현 가능
+// 개발자몯에서 네트워크 > 글꼴 더블 클릭만 
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Regular.woff') format('woff'); /* IE9 Compat Modes */
+    font-weight: 400
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Medium.woff') format('woff'); /* IE9 Compat Modes */
+    font-weight: 500
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Semibold.woff') format('woff'); /* IE9 Compat Modes */
+    font-weight: 600
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Bold.woff') format('woff'); /* IE9 Compat Modes */
+    font-weight: 700
+}

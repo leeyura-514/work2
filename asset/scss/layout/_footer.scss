@@ -1,0 +1,203 @@
+.footer-area{
+    margin: 0;
+    background: #fafafa;
+    padding: 40px 16px 40px;
+    color: #555;
+    letter-spacing: -.5px;
+    .counsel-box{
+        width: 50px;
+        border: 1px solid #e9e9e9;
+        background-color: rgba(255,255,255,0.7);
+        //** js : 안보이게 고정
+        opacity: 0;
+        position: fixed;
+        right: 10px;
+        transition: .5s;
+        bottom: 50px;
+        z-index: 40;
+        
+        //** js : 스크롤바 올리면 보임 바꾸고싶은 수치만 적기
+        &.show{
+            opacity: 1;
+            // transition: 1s; @@ 이거까지 태그하면 사라질때 적용안됨삭제해야함
+        }
+        .top-box{
+            border-bottom: 1px solid #e9e9e9;
+            padding: 5px;
+            .btn{
+                display: block;
+                padding: 5px;
+                box-sizing: border-box;
+                &.counsel{
+                    display: block;
+                    background: url(../images/icon/btn-counsel.png) no-repeat;
+                    background-position: center;
+                    background-size: 35px 30px;
+                    //
+                    width: 100%;
+                    height: 30px;
+                }
+            }  
+            span{
+                display: block;
+                text-align: center;
+                //
+                padding-top: 10px;
+                font-size: 11px;
+                line-height: 13px;
+                letter-spacing: -0.04em;
+                font-weight: 600;
+                color: #595959;
+            } 
+        }//top-box
+        .top{
+            display: block;
+            padding: 5px;
+            box-sizing: border-box;
+            background: url(../images/icon/btn-top.png) center no-repeat;
+            background-size: 19px auto;
+            height: 24px;
+            line-height: 24px;
+            padding: 24px 20px 14px;
+        }
+        
+        
+    }//counsel-box
+    .customer-area{
+        padding-bottom: 30px;
+        .title{
+            font-size: 13px;
+            line-height: 16px;
+            font-weight: 600;
+            padding-bottom: 15px;
+        }
+        .tel{
+            font-size: 18px;
+            line-height: 21px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            display: block;
+
+        }
+        p{
+            font-size: 13px;
+            line-height: 16px;
+            font-weight: 400;
+            +p{
+                padding-top: 5px;
+            }
+        }
+
+    }//customer-area
+    .link-sns-area{
+        width: 150px;
+        .sns-item{
+            margin-right: 25px;
+            display: inline-block;
+            &.ic-facebook{
+                width: 12px; height: 22px;
+                background: url(../images/icon/footer-sns01.png) center no-repeat;
+                background-size: 12px 22px;
+            }
+            &.ic-youtube{
+                width: 22px; height: 22px;
+                background: url(../images/icon/footer-sns02.png) center no-repeat;
+                background-size: 22px 22px;
+            }
+            &.ic-insta{
+                width: 22px; height: 22px;
+                background: url(../images/icon/footer-sns03.png) center no-repeat;
+                background-size: 22px 22px;
+            }
+        }
+    }
+    .info-area{
+        padding: 30px 0;
+        a{
+            //font
+            font-size: 12px;
+            line-height: 1.7;
+            color: #777;
+        }
+        .link-info{  
+            position: relative;
+            display: inline-block;
+            padding-right: 10px;
+            margin-right: 10px;
+            padding: 9px 0;
+            font-weight: bold;
+          
+            &+.link-info::before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -7px;// right으로 설정되어있어서 출력이안되었음
+                transform: translateY(-50%);
+                width: 1px;
+                height: 10px;
+                background: #ccc;
+                
+            }
+
+        }
+    }
+    .corp-area{
+        p{
+            font-size: 11px;
+            line-height: 17px;
+            font-weight: 400;
+            color: #777;
+          
+            .bar{
+                width: 1px;
+                height: 10px;
+                background: #ccc;
+                margin: 0 10px;
+                display: inline-block;
+            }
+        }
+        .mail{
+            line-height: 21px;
+        }
+        .copy{
+            letter-spacing: -0.02em;
+            padding-top: 30px;
+            strong{
+                font-weight: bold;
+            }
+        }
+
+
+
+    }
+    .link-mark-area{
+        margin-top: 24px;
+        .mark-item{
+            display: inline-block;
+            vertical-align: middle;//이미지 높이 맞추기위함
+            margin-right: 22px;
+            width: 45px;
+            &.ic-agency{
+                width: 45px; height: 34px;
+                background: url(../images/icon/footer-mark01.png) center no-repeat;
+                background-size: 45px 34px;
+
+            }
+            &.ic-symatec{
+                width: 36px; height: 38px;
+                background: url(../images/icon/footer-mark02.png) center no-repeat;
+                background-size: 36px 38px;
+
+            }
+            &.ic-KG{
+                width: 27px; height: 31px;
+                background: url(../images/icon/footer-mark03.png) center no-repeat;
+                background-size: 27px 31px;
+
+            }
+        }
+
+    }
+
+    
+}

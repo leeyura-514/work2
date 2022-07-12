@@ -1,0 +1,142 @@
+// 컴포넌트란?
+// 컴포넌트는 "소형" 레이아웃 같은 것이다. 사이트 내에서 재사용가능한 작은 부분들을 여기에 정의한다.
+//  buttons, forms, profile pictures와 같은 것이 여기에 해당된다. 
+
+
+
+// 더보기 >> 화살표가 안보임 보완 필요
+.link-box{
+    display: flex;
+    align-items: center;
+    padding: 0 38px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+
+    .link-more{
+        display: block;
+        width: 100%;
+        height: 52px;
+        line-height: 52px;
+        text-align: center;
+
+        border: 1px solid #e0e0e0;
+        box-sizing: border-box;
+        background: #fff;
+        font-size: 15px;
+        color: #222;
+        font-weight: 500;
+        .ico-more{
+            position: relative;
+
+            &::after{
+            content: '';
+            display: inline-block;
+            background: url(https://m.andar.co.kr/common/mo/go_cate.png) center no-repeat;
+            width: 19px; height: 19px;
+            background-size: 19px auto;
+            padding-left: 5px;
+            position: absolute;
+            top: -1px;
+
+            }
+
+        }
+
+
+
+
+    }
+}
+
+
+//보러가기 >> 텍스트 글자가 다 다르기 떄문에 화살표 수정필요
+.link-recommend{
+    // background: #f00;
+    
+    .link-all{
+        display: inline-block;
+        color: #fff;
+        text-align: left;
+        border-radius: 2px;
+        background: #1e1e1e;
+        border: 1px solid #1e1e1e;
+        box-sizing: border-box;
+        //font
+        padding: 8px 47px 8px 18px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.03em;
+        font-weight: 700;
+
+        position: relative;
+        &::after{
+            //after로 하면 화살표 사라짐
+            content: '';
+            background: url(../images/icon/link-recommend-more.png) no-repeat;
+            background-size: 15px auto;
+            width: 15px;
+            height: 15px;
+            // background-position: calc(100% - 18px) center;
+            z-index: 10;
+            position: absolute; 
+            right: 18px; top: 13px;
+        }
+        
+    }
+}
+
+//자세히보기 완료 (banner-area 영역만 width 다름)
+.link-detail{
+    display: inline-block;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+    .banner-area &{
+        width: 122px;
+        font-size: 15px;
+        letter-spacing: -0.05em;
+    }
+
+}
+
+//더보기 >
+.link-product{
+
+    .link-more{
+        display: inline-block;
+        position: absolute;//por > sc-title
+        right: 20px;
+        top: 60px;
+        font-size: 13px;
+        line-height: 0.9;
+        &::after{
+            vertical-align: top;//화살표 위치 아래로 내림
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 11px;
+            margin-left: 3px;
+            margin-bottom: 2px;
+            // background-image: url(../images/icon/link-product-more); 파일로는 스크린에 보이지않아서 사이트에서 가져옴
+            background-image: url(https://m.andar.co.kr/common/mo/icon-move-gr.png);
+            background-repeat: no-repeat;
+            background-size: 15px auto;
+            background-position: center;
+        }
+        // @@ 상속시키기 가능
+        .swiper.product02 &, 
+        .swiper.product03 &{
+            top: 40px;
+
+        }
+
+    }   
+    
+}
